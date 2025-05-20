@@ -17,29 +17,36 @@ html,body{
 
 nav #header {
     z-index: 1000;
+    margin: 0 30px 0 30px;
 }
 
 #buttons {
     z-index: 1000;
 }
 
+/* Modificações para #main e seus filhos */
 #main{
-    height: 100%;
+    min-height: 100vh; /* Usa a altura total da viewport, permitindo que o conteúdo empurre para baixo */
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.936); 
-    position: relative;
+    background-color: rgba(255, 255, 255, 0.936);
+    position: relative; /* Mantém relative para os elementos filhos */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column; /* Organiza os filhos em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente se o conteúdo for menor que a tela */
+    padding-top: 80px; /* Adiciona padding para evitar que o conteúdo fique sob a navbar fixa */
+    padding-bottom: 40px; /* Padding na parte inferior */
 }
+
 #main img{
-    height:540px;
-    width: 450px;
+    max-height: 400px; /* Altura máxima para telas maiores */
+    width: 80%; /* Largura relativa para ser responsivo */
+    max-width: 450px; /* Largura máxima para a imagem */
     border-radius: 25px;
-    position: relative;
     z-index: 10;
     object-fit: cover;
-    }
+    margin-bottom: 20px; /* Espaço abaixo da imagem */
+}
  
 #scroll-div{
     position:absolute;
@@ -138,6 +145,10 @@ nav #header {
     text-align: center;
     text-transform: uppercase;
     color: black;
+}
+
+footer {
+    margin: 0 30px 0 30px;
 }
 
 @keyframes scroll{
