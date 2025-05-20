@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+ <meta charset='UTF-8'>
+ <meta name='viewport' content='width=device-width, initial-scale=0.8'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<title>Twig</title>
+</head>
+<body>
+
+    <nav id="header" class="fixed w-full z-30 top-0 text-white">
+      <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+        <div class="flex-1 flex justify-center lg:justify-start mb-6 lg:mb-0"> 
+            <a class="text-purple-900 no-underline hover:no-underline font-bold text-2xl lg:text-4xl inline-flex items-center" href="#">
+                <img src="/imgs/Icon.ico" alt="Ícone Twig" class="h-8 w-auto mr-2">
+                Twig
+            </a>
+        </div>
+        
+        <div class="block lg:hidden pr-4">
+            <button id="nav-toggle" class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>Menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
+            <ul class="list-reset lg:flex justify-end flex-1 items-center">
+                <li class="mr-3">
+                    <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Home</a>
+                </li>
+                <li class="mr-3">
+                    <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">Road Map</a>
+                </li>
+                <li class="mr-3">
+                    <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">White Paper</a>
+                </li>
+            </ul>
+            <button id="navAction" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                Buy Now
+            </button>
+        </div>
+      </div>
+      <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
+    </nav>
+
+    <div id="main">
+        <div class="container mx-auto px-6 py-12">
+            <section class="mb-12">
+                <h2 class="text-4xl font-bold text-purple-900 mb-6 text-center">Twig: Where Meme Magic Meets Reward</h2>
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Executive Summary: Calling All Apprentice Wizards!</h3>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Welcome to the world of Twig, the memecoin that's set to transform the crypto landscape with a touch of magic and a whole lot of humor!
+                    Twig isn't just another digital currency; it's a community-driven movement centered around our adorable wizard mascot, Twig,
+                    who, with his pointy hat and magic staff, needs your help to build a kingdom of memes and prosperity. Get ready for a journey
+                    where creativity is rewarded and fun is guaranteed. Join Twig, help him spread his magic, and he will surely reward you!
+                </p>
+            </section>
+
+            <hr class="border-b border-gray-200 my-8">
+
+            <section class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">The Problem & The Magic Solution</h3>
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                    The memecoin space is vibrant, but often lacks clear purpose and genuine long-term community engagement.
+                    Twig's magic lies in its ability to fill this gap. We believe that the true strength of a memecoin comes from its
+                    <strong class="text-purple-900">active and creative community</strong>.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Twig is more than just a cute image; he's the catalyst for an ecosystem where humor, creativity, and collaboration are at its core.
+                    Our solution is to create an environment where <strong class="text-purple-900">every member is a co-creator</strong>, encouraging the production of memes and
+                    content that not only elevate the project but also generate value and rewards for those who dedicate their time and talent.
+                </p>
+            </section>
+
+            <hr class="border-b border-gray-200 my-8">
+
+            <section class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Tokenomics: The Magical Essence of Twig</h3>
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                    The <strong class="text-purple-900">$TWIG</strong> token will be the lifeblood of our magical ecosystem.
+                </p>
+                <ul class="list-disc list-inside text-lg text-gray-700 mb-6 space-y-2">
+                    <li><strong class="font-semibold">Token Name:</strong> Twig</li>
+                    <li><strong class="font-semibold">Symbol:</strong> $TWIG</li>
+                    <li><strong class="font-semibold">Blockchain:</strong> Solana</li>
+                    <li><strong class="font-semibold">Total Supply:</strong> [Define a total number of tokens. E.g., 1,000,000,000 (1 billion) $TWIG]</li>
+                </ul>
+
+                <h4 class="text-xl font-semibold text-gray-800 mb-3">Magical Distribution:</h4>
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                    The distribution of $TWIG is designed to ensure a fair and decentralized launch, putting power into the hands of the community:
+                </p>
+                <ul class="list-disc list-inside text-lg text-gray-700 mb-6 space-y-2">
+                    <li><strong class="font-semibold">Fair Launch:</strong> [Percentage, e.g., 80%] of tokens will be launched into the liquidity pool, ensuring accessibility for everyone.</li>
+                    <li><strong class="font-semibold">Marketing & Partnerships:</strong> [Percentage, e.g., 10%] allocated for marketing campaigns, strategic partnerships, and community growth.</li>
+                    <li><strong class="font-semibold">Development & Ecosystem:</strong> [Percentage, e.g., 5%] for ongoing platform development and future ecosystem initiatives.</li>
+                    <li><strong class="font-semibold">Community Reward Reserves:</strong> [Percentage, e.g., 5%] dedicated to rewards for content creators and $TWIG holders.</li>
+                </ul>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    <strong class="font-semibold">Token Utility:</strong> Currently, $TWIG is a community-driven memecoin fueled by humor. As the Twig ecosystem evolves,
+                    we will explore additional utilities, such as governance, exclusive content access, and future NFT initiatives.
+                </p>
+            </section>
+
+            <hr class="border-b border-gray-200 my-8">
+
+            <section class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">The Twig Community: Our True Wizards</h3>
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                    The community is the heart and soul of Twig. It's your humor, your creativity, and your engagement that will bring our wizard mascot to life.
+                </p>
+                <ul class="list-disc list-inside text-lg text-gray-700 mb-6 space-y-2">
+                    <li>
+                        <strong class="font-semibold">Constant Meme & Content Creation:</strong> We encourage all members to unleash their creativity!
+                        We want you to create <strong class="text-purple-900">memes, GIFs, videos, fan art, and any fun content</strong> that captures the essence
+                        of Twig and his magical journey. We believe the best moments and widest reach come from the organic, hilarious content created by you.
+                    </li>
+                    <li>
+                        <strong class="font-semibold">Twitter Spotlight:</strong> To celebrate and amplify your brilliance, the official Twig Twitter page
+                        (<strong class="text-blue-500">@OfficialTwigCoin</strong> - or your chosen username) will be constantly monitoring and
+                        <strong class="text-purple-900">sharing the best and most impactful community-created content</strong>. Your memes and creations will be seen
+                        by our growing follower base, giving you the recognition you deserve and boosting our project's visibility!
+                    </li>
+                </ul>
+            </section>
+
+            <hr class="border-b border-gray-200 my-8">
+
+            <section class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Roadmap: Twig's Magical Journey</h3>
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    Our journey with Twig will be built in phases, each bringing more magic and rewards to our community.
+                </p>
+
+                <div class="space-y-8">
+                    <div>
+                        <h4 class="text-xl font-semibold text-purple-900 mb-2">Phase 1: The Magical Awakening (Launch & Engagement)</h4>
+                        <ul class="list-disc list-inside text-lg text-gray-700 space-y-1">
+                            <li>Launch of the $TWIG token on [DEX Name, e.g., Raydium, PancakeSwap].</li>
+                            <li>Community creation and growth on social media (Twitter, Telegram).</li>
+                            <li>Initiation of engagement campaigns for meme and content creation.</li>
+                            <li>First shares of community memes on the official Twitter page.</li>
+                            <li>Initial partnerships with memecoin influencers.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xl font-semibold text-purple-900 mb-2">Phase 2: Building the Meme Kingdom (Expansion & Recognition)</h4>
+                        <ul class="list-disc list-inside text-lg text-gray-700 space-y-1">
+                            <li>Increase in $TWIG holder base.</li>
+                            <li>Listings on crypto tracking platforms (CoinGecko, CoinMarketCap).</li>
+                            <li>Organization of meme and content contests with $TWIG rewards.</li>
+                            <li>Broader marketing campaigns to increase Twig's visibility.</li>
+                            <li>Launch of Twig-themed merchandise.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xl font-semibold text-purple-900 mb-2">Phase 3: The Magical Ascent (NFTs & Exclusive Rewards)</h4>
+                        <ul class="list-disc list-inside text-lg text-gray-700 space-y-1">
+                            <li><strong class="text-purple-900">Development and Launch of the Official Twig NFT Collection!</strong> This collection will feature unique and collectible artworks inspired by our wizard and his world.</li>
+                            <li><strong class="text-purple-900">Reward for Top Holders:</strong> The <strong class="text-purple-900">leading $TWIG holders</strong> (Top 100, Top 500, etc., to be defined) will be <strong class="text-purple-900">rewarded with exclusive NFTs</strong> from our collection, as a token of gratitude and recognition for their support and faith in Twig's magic.</li>
+                            <li>Exploration of partnerships and integrations for NFT utility (e.g., in games or metaverses).</li>
+                            <li>Research and development for future $TWIG token utilities.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xl font-semibold text-purple-900 mb-2">Phase 4: Limitless Magic (Future & Beyond)</h4>
+                        <ul class="list-disc list-inside text-lg text-gray-700 space-y-1">
+                            <li>Exploration of centralized exchange (CEX) listings.</li>
+                            <li>Implementation of community governance mechanisms.</li>
+                            <li>Expansion of the Twig ecosystem with new features or strategic partnerships.</li>
+                            <li>Continued building of a strong and vibrant community, always focusing on memes and rewards.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="border-b border-gray-200 my-8">
+
+            <section class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Risks and Disclaimers</h3>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Like any project in the cryptocurrency space, $TWIG carries inherent risks, including market volatility, competition, and regulatory risks.
+                    There is no guarantee of profit. It is essential that participants conduct their own research (DYOR - Do Your Own Research) before investing.
+                    This White Paper does not constitute financial advice.
+                </p>
+            </section>
+
+            <hr class="border-b border-gray-200 my-8">
+
+            <section>
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Conclusion: Join the Magic!</h3>
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    Twig is more than a memecoin; it's a community adventure, a meme laboratory, and a portal to fun and rewards.
+                    We invite you to grab your wizard hat, join our community, and help us spread Twig's magic across the crypto world.
+                    Together, we'll make Twig the most beloved and rewarding memecoin!
+                </p>
+
+                <h4 class="text-xl font-semibold text-gray-800 mb-3">Contact:</h4>
+                <ul class="list-disc list-inside text-lg text-gray-700 space-y-1">
+                    <li><a href="[Your Twitter Link]" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Twitter</a></li>
+                    <li><a href="[Your Telegram Link]" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Telegram</a></li>
+                    <li><a href="[Link to Website (if any)]" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Official Website</a></li>
+                    <li><strong class="font-semibold">Contract Address:</strong> [Contract Address (future)]</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <footer class="bg-white">
+      <div class="container mx-auto px-8">
+        <div class="w-full flex flex-col md:flex-row py-6">
+          <div class="flex-1 mb-6"> <a class="text-purple-900 no-underline hover:no-underline font-bold text-2xl lg:text-4xl inline-flex items-center" href="#">
+              <img src="/imgs/Icon.ico" alt="Ícone Twig" class="h-8 w-auto mr-2">
+              Twig
+            </a>
+          </div>
+          <div class="flex-1">
+            <p class="uppercase text-gray-500 md:mb-6">About</p>
+            <ul class="list-reset mb-6">
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">White Paper</a>
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Road Map</a>
+              </li>
+            </ul>
+          </div>
+          <div class="flex-1">
+            <p class="uppercase text-gray-500 md:mb-6">Social</p>
+            <ul class="list-reset mb-6">
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Twitter</a>
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Telegram</a>
+              </li>
+            </ul>
+          </div>
+          <div class="flex-1">
+            <p class="uppercase text-gray-500 md:mb-6">Tokenomics</p>
+            <ul class="list-reset mb-6">
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Buy Now</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/script.js"></script>
+</body>
+</html>

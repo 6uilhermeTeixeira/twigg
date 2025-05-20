@@ -15,8 +15,8 @@
     <nav id="header" class="fixed w-full z-30 top-0 text-white">
       <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
         <div class="flex-1 flex justify-center lg:justify-start mb-6 lg:mb-0"> 
-            <a class="text-purple-900 no-underline hover:no-underline font-bold text-2xl lg:text-4xl inline-flex items-center" href="#">
-                <img src="/Icon.ico" alt="Ícone Twig" class="h-8 w-auto mr-2">
+            <a class="text-purple-900 no-underline hover:no-underline font-bold text-2xl lg:text-4xl inline-flex items-center" href="/index.html">
+                <img src="/imgs/Icon.ico" alt="Ícone Twig" class="h-8 w-auto mr-2">
                 Twig
             </a>
         </div>
@@ -33,13 +33,13 @@
         <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
             <ul class="list-reset lg:flex justify-end flex-1 items-center">
                 <li class="mr-3">
-                    <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Home</a>
+                    <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="/index.html">Home</a>
                 </li>
                 <li class="mr-3">
-                    <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">Road Map</a>
+                    <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#roadmap">Road Map</a>
                 </li>
                 <li class="mr-3">
-                    <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">White Paper</a>
+                    <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/whitepaper.html">White Paper</a>
                 </li>
             </ul>
             <button id="navAction" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
@@ -51,7 +51,7 @@
     </nav>
 
     <div id="main">
-        <img src="/Twig.png" alt="">
+        <img src="/imgs/Twig.png" alt="">
         <h1 id="text">Twig needs you! Help him build his magical world and he will reward you.</h1>
         <div id="scroll-div">
             <h1>$Twig </h1>
@@ -118,22 +118,77 @@
         </div>
     </div>
 
+    <div id="roadmap" class="container mx-auto px-6 py-12">
+        <h2 class="text-4xl font-bold text-center text-purple-900 mb-10">Our Magical Roadmap</h2>
+
+        <div class="flex flex-col md:flex-row md:space-x-8 space-y-8 md:space-y-0 justify-center items-stretch">
+
+            <div class="flex flex-col md:flex-row items-center bg-gray-100 rounded-lg shadow-lg p-6 w-full md:w-1/3 border-l-4 border-purple-500">
+                <div class="flex-shrink-0 mb-4 md:mb-0 md:mr-6">
+                    <img src="/imgs/Green Orb.png" alt="Ícone Fase 1" class="h-16 w-16 mx-auto md:mx-0">
+                </div>
+                <div class="text-center md:text-left flex-grow">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">Phase 1: The Magical Awakening</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Launching $TWIG, building the community, and the beginning of our Twitter meme journey.
+                        The magical foundation is being laid!
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center bg-gray-100 rounded-lg shadow-lg p-6 w-full md:w-1/3 border-l-4 border-pink-500">
+                <div class="flex-shrink-0 mb-4 md:mb-0 md:mr-6">
+                    <img src="/imgs/Blue Orb.png" alt="Ícone Fase 2" class="h-16 w-16 mx-auto md:mx-0">
+                </div>
+                <div class="text-center md:text-left flex-grow">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">Phase 2: Building the Meme Kingdom</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Expanding our holder base, listing on platforms and organizing meme contests.
+                        The magic spreads!
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center bg-gray-100 rounded-lg shadow-lg p-6 w-full md:w-1/3 border-l-4 border-blue-500">
+                <div class="flex-shrink-0 mb-4 md:mb-0 md:mr-6">
+                    <img src="/imgs/Purple Orb.png" alt="Ícone Fase 3" class="h-16 w-16 mx-auto md:mx-0">
+                </div>
+                <div class="text-center md:text-left flex-grow">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">Phase 3: The Magical Ascension</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Launch of Twig's NFT collection and rewards for the biggest holders.
+                        Get ready for exclusive rewards!
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
     <footer class="bg-white">
       <div class="container mx-auto px-8">
         <div class="w-full flex flex-col md:flex-row py-6">
           <div class="flex-1 mb-6"> <a class="text-purple-900 no-underline hover:no-underline font-bold text-2xl lg:text-4xl inline-flex items-center" href="#">
-              <img src="/Icon.ico" alt="Ícone Twig" class="h-8 w-auto mr-2">
+              <img src="/imgs/Icon.ico" alt="Ícone Twig" class="h-8 w-auto mr-2">
               Twig
             </a>
+          </div>
+          <div class="flex-1">
+            <p class="uppercase text-gray-500 md:mb-6">Buy Now</p>
+            <ul class="list-reset mb-6">
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Pump.Fun</a>
+              </li>
+            </ul>
           </div>
           <div class="flex-1">
             <p class="uppercase text-gray-500 md:mb-6">About</p>
             <ul class="list-reset mb-6">
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">White Paper</a>
+                <a href="/whitepaper.html" class="no-underline hover:underline text-gray-800 hover:text-pink-500">White Paper</a>
               </li>
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Road Map</a>
+                <a href="#roadmap" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Road Map</a>
               </li>
             </ul>
           </div>
@@ -148,17 +203,8 @@
               </li>
             </ul>
           </div>
-          <div class="flex-1">
-            <p class="uppercase text-gray-500 md:mb-6">Tokenomics</p>
-            <ul class="list-reset mb-6">
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Buy Now</a>
-              </li>
-            </ul>
-          </div>
         </div>
       </div>
-      <a href="https://www.freepik.com/free-photos-vectors/background" class="text-gray-500">Background vector created by freepik - www.freepik.com</a>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
