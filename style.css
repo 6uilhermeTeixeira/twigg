@@ -1,0 +1,171 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+.gradient {
+        background: linear-gradient(90deg, #6B21A8 0%, #60A5FA 100%);
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+nav #header {
+    z-index: 1000;
+}
+
+#buttons {
+    z-index: 1000;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.936); 
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#main img{
+    height:540px;
+    width: 450px;
+    border-radius: 25px;
+    position: relative;
+    z-index: 10;
+    object-fit: cover;
+    }
+ 
+#scroll-div{
+    position:absolute;
+    top:17%;
+    width: 100%;
+    /* height:100px; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    
+}
+
+#scroll-div h1{
+    display: inline-block;
+    font-size:140px;
+    margin-right:20px;
+    letter-spacing: 4px;
+    animation-name: scroll;
+    animation-duration: 3s;
+    animation-timing-function:  linear ;
+    animation-iteration-count:  infinite ;
+    
+    
+}
+
+#scroll-div::-webkit-scrollbar{
+    display: none;
+}
+
+
+#scroll-div2{
+    position:absolute;
+    top:40%;
+    width: 100%;
+    /* height:100px; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    z-index: 20;
+}
+
+#scroll-div2 h1{
+    display: inline-block;
+    font-size:140px;
+    margin-right:20px;
+    letter-spacing: 4px;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+     animation-name: scroll;
+    animation-duration: 3s;
+    animation-timing-function:  linear ;
+    animation-iteration-count:  infinite ;
+    animation-direction: reverse;
+}
+
+#scroll-div2::-webkit-scrollbar{
+    display: none;
+}
+
+
+#scroll-div3{
+    position:absolute;
+    top:60%;
+    width: 100%;
+    /* height:100px; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#scroll-div3 h1{
+    display: inline-block;
+    font-size:140px;
+    margin-right:20px;
+    letter-spacing: 4px;
+     animation-name: scroll;
+    animation-duration: 3s;
+    animation-timing-function:  linear ;
+    animation-iteration-count:  infinite ;
+}
+
+#scroll-div3::-webkit-scrollbar{
+    display: none;
+}
+
+#text{
+    top:10%;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    width:60%;
+   
+    z-index:20;
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+}
+
+@keyframes scroll{
+    from{
+        transform:translateX(calc(-100% - 30px));
+    }
+    to{
+        transform:translateX(0);
+    }
+}
+
+
+/* Transições para o header */
+#header {
+  transition: background-color 2s ease-in-out, box-shadow 3s ease-in-out;
+}
+
+/* Transições para navAction */
+#navAction {
+  transition: background-color 2s ease-in-out, color 3s ease-in-out;
+}
+
+/* Transições para nav-content */
+#nav-content {
+  transition: background-color 2s ease-in-out;
+}
+
+/* Transições para os elementos com toggleColour */
+.toggleColour {
+  transition: color 2s ease-in-out;
+}
