@@ -20,7 +20,7 @@ nav #header {
 }
 
 #buttons {
-    z-index: 1000;
+    z-index: 50;
 }
 
 /* Modificações para #main e seus filhos */
