@@ -10,8 +10,8 @@ var scrollpos = window.scrollY;
         scrollpos = window.scrollY;
 
         if (scrollpos > 10) {
-          header.classList.add("bg-white");
-          navaction.classList.remove("bg-white");
+          header.classList.add("bg-black");
+          navaction.classList.remove("bg-black");
           navaction.classList.add("gradient");
           navaction.classList.remove("text-gray-800");
           navaction.classList.add("text-white");
@@ -22,11 +22,11 @@ var scrollpos = window.scrollY;
           }
           header.classList.add("shadow");
           navcontent.classList.remove("bg-gray-100");
-          navcontent.classList.add("bg-white");
+          navcontent.classList.add("bg-black");
         } else {
-          header.classList.remove("bg-white");
+          header.classList.remove("bg-black");
           navaction.classList.remove("gradient");
-          navaction.classList.add("bg-white");
+          navaction.classList.add("bg-black");
           navaction.classList.remove("text-white");
           navaction.classList.add("text-gray-800");
           //Use to switch toggleColour colours
@@ -36,7 +36,7 @@ var scrollpos = window.scrollY;
           }
 
           header.classList.remove("shadow");
-          navcontent.classList.remove("bg-white");
+          navcontent.classList.remove("bg-black");
           navcontent.classList.add("bg-gray-100");
         }
       });

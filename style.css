@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: black;
+    color: white;
 }
 
 .gradient {
@@ -13,6 +13,7 @@
 html,body{
     height: 100%;
     width: 100%;
+    background-color: black;
 }
 
 nav #header {
@@ -27,7 +28,7 @@ nav #header {
 #main{
     min-height: 100vh; /* Usa a altura total da viewport, permitindo que o conteúdo empurre para baixo */
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.936);
+    background-color: rgba(0, 0, 0);
     position: relative; /* Mantém relative para os elementos filhos */
     display: flex;
     flex-direction: column; /* Organiza os filhos em coluna */
@@ -94,7 +95,7 @@ nav #header {
     letter-spacing: 4px;
     color: transparent;
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: rgb(0, 0, 0);
+    -webkit-text-stroke-color: rgb(255, 255, 255);
      animation-name: scroll;
     animation-duration: 3s;
     animation-timing-function:  linear ;
@@ -143,7 +144,7 @@ nav #header {
     z-index:20;
     text-align: center;
     text-transform: uppercase;
-    color: black;
+    color: white;
 }
 
 @keyframes scroll{
