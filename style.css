@@ -177,3 +177,39 @@ nav #header {
 .toggleColour {
   transition: color 2s ease-in-out;
 }
+
+
+/* Efeito de Rotação do Selo *//* Efeito de Rotação do Selo *//* Efeito de Rotação do Selo */
+.overlay-container {
+    min-height: 200px; /* Garante que o container tenha altura */
+}
+
+/* Definição da animação de rotação */
+@keyframes rotate360 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Aplicação da animação para cada imagem com diferentes durações */
+.animate-rotate-front {
+    animation: rotate360 10s linear infinite; /* 1 segundo para a imagem da frente */
+}
+
+.animate-rotate-middle {
+    animation: rotate360 20s linear infinite; /* 2 segundos para a imagem do meio */
+}
+
+.animate-rotate-back {
+    animation: rotate360 40s linear infinite; /* 4 segundos para a imagem de fundo */
+}
+/* Efeito de Rotação do Selo *//* Efeito de Rotação do Selo *//* Efeito de Rotação do Selo */
+
+/* Efeito de Brilho do Selo *//* Efeito de Brilho do Selo *//* Efeito de Brilho do Selo */
+.glow-effect-purple {
+    filter: drop-shadow(0 0 15px rgba(126, 34, 206, 1.0)) drop-shadow(0 0 30px rgba(126, 34, 206, 0.75)) drop-shadow(0 0 60px rgba(126, 34, 206, 0.5));
+}
+/* Efeito de Brilho do Selo *//* Efeito de Brilho do Selo *//* Efeito de Brilho do Selo */
