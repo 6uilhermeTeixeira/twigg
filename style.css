@@ -213,3 +213,45 @@ nav #header {
     filter: drop-shadow(0 0 15px rgba(126, 34, 206, 1.0)) drop-shadow(0 0 30px rgba(126, 34, 206, 0.75)) drop-shadow(0 0 60px rgba(126, 34, 206, 0.5));
 }
 /* Efeito de Brilho do Selo *//* Efeito de Brilho do Selo *//* Efeito de Brilho do Selo */
+
+/* --- MEDIA QUERIES PARA RESPONSIVIDADE DO CONTÊINER DE IMAGENS --- */
+
+/* Estilo padrão para telas menores que 'sm' (ex: celulares) */
+.image-container-responsive {
+    width: 100%;
+    /* Altura ajustada para ser proporcional em telas pequenas.
+       Ajuste este valor '320px' se suas imagens têm proporções diferentes. */
+    height: 320px;
+}
+
+/* Telas 'sm' (640px e acima) */
+@media (min-width: 640px) {
+    .image-container-responsive {
+        width: 384px; /* w-96 */
+        height: 384px; /* h-96 */
+    }
+}
+
+/* Telas 'md' (768px e acima) */
+@media (min-width: 768px) {
+    .image-container-responsive {
+        width: 512px; /* w-128 (Tailwind oferece até w-96, para 512px seria w-[512px] ou personalizar) */
+        height: 512px;
+    }
+}
+
+/* Telas 'lg' (1024px e acima) */
+@media (min-width: 1024px) {
+    .image-container-responsive {
+        width: 768px; /* w-[768px] */
+        height: 768px; /* h-[768px] */
+    }
+}
+
+/* Telas 'xl' (1280px e acima) - Opcional, se você quiser um tamanho ainda maior */
+/* @media (min-width: 1280px) {
+    .image-container-responsive {
+        width: 900px;
+        height: 900px;
+    }
+} */

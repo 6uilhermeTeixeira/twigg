@@ -6,7 +6,6 @@
 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 <meta http-equiv='X-UA-Compatible' content='ie=edge'>
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <title>Twigg</title>
 </head>
@@ -122,23 +121,29 @@
         </div>
     </div>
 
-    <div class="max-w-4xl mx-auto -mt-8 p-6 shadow-lg rounded-lg">
+    <div class="max-w-4xl mx-auto -mt-8 p-6 sm:p-8 lg:p-10 shadow-lg rounded-lg">
         <h2 class="text-3xl font-bold text-purple-700 mb-6 text-center">
             Twigg's World Seed
         </h2>
 
-        <div class="relative w-96 h-96 mx-auto flex items-center justify-center overlay-container">
+        <div class="relative mx-auto flex items-center justify-center image-container-responsive overlay-container">
             <img src="/imgs/RuneRing3.png"
-                 class="absolute w-full h-full object-contain z-10 opacity-75 animate-rotate-back glow-effect-purple">
+                 alt="Imagem de Fundo"
+                 class="absolute h-full object-contain z-10 opacity-75 animate-rotate-back glow-effect-purple"
+                 style="height: 90%;">
 
             <img src="/imgs/RuneRing2.png"
-                 class="absolute w-full h-full object-contain z-20 opacity-85 animate-rotate-middle glow-effect-purple">
+                 alt="Imagem do Meio"
+                 class="absolute h-full object-contain z-20 opacity-85 animate-rotate-middle glow-effect-purple"
+                 style="height: 90%;">
 
             <img src="/imgs/RuneRing1.png"
-                 class="absolute w-full h-full object-contain z-30 opacity-95 animate-rotate-front glow-effect-purple">
+                 alt="Imagem da Frente"
+                 class="absolute h-full object-contain z-30 opacity-95 animate-rotate-front glow-effect-purple"
+                 style="height: 90%;">
         </div>
 
-        <p class="mt-8 text-gray-100 text-center">
+        <p class="mt-8 text-gray-400 text-center">
             Twigg wanders the desolate void, in his hands, the last memory of a forgotten world. Its symbols are like an ancestral whisper, guiding his every step. With the seed in hand, Twigg doesn't mourn the end, but weaves a new dawn, a universe reborn under the memory and hope of his ancient guide. The time for reconstruction has come.
         </p>
 
