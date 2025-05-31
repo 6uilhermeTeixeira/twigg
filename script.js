@@ -21,7 +21,6 @@ var scrollpos = window.scrollY;
             toToggle[i].classList.remove("text-white");
           }
           header.classList.add("shadow");
-          navcontent.classList.remove("bg-gray-100");
           navcontent.classList.add("bg-black");
         } else {
           header.classList.remove("bg-black");
@@ -37,7 +36,6 @@ var scrollpos = window.scrollY;
 
           header.classList.remove("shadow");
           navcontent.classList.remove("bg-black");
-          navcontent.classList.add("bg-gray-100");
         }
       });
 
