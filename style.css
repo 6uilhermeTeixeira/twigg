@@ -47,6 +47,29 @@ nav #header {
     object-fit: cover;
     margin-bottom: 20px; /* Espaço abaixo da imagem */
 }
+
+.background-section {
+  background-image: linear-gradient(to bottom, 
+                      rgba(0, 0, 0, 1.0) 0%,     /* Começa com 80% de opacidade (preto) no topo (0%) */
+                      rgba(0, 0, 0, 0.9) 10%,    /* Diminui para 40% de opacidade a 15% da altura */
+                      rgba(0, 0, 0, 0.15) 25%,      /* Totalmente transparente a 30% da altura */
+                      rgba(0, 0, 0, 0.15) 75%,      /* Permanece totalmente transparente até 70% da altura */
+                      rgba(0, 0, 0, 0.9) 90%,    /* Aumenta para 40% de opacidade a 85% da altura */
+                      rgba(0, 0, 0, 1.0) 100%   /* Termina bem transparente (quase preto) na parte inferior */
+                    ),linear-gradient(to left, 
+                      rgba(0, 0, 0, 1.0) 0%,     /* Começa com 80% de opacidade (preto) no topo (0%) */
+                      rgba(0, 0, 0, 0.9) 10%,    /* Diminui para 40% de opacidade a 15% da altura */
+                      rgba(0, 0, 0, 0.15) 25%,      /* Totalmente transparente a 30% da altura */
+                      rgba(0, 0, 0, 0.15) 75%,      /* Permanece totalmente transparente até 70% da altura */
+                      rgba(0, 0, 0, 0.9) 90%,    /* Aumenta para 40% de opacidade a 85% da altura */
+                      rgba(0, 0, 0, 1.0) 100%   /* Termina bem transparente (quase preto) na parte inferior */
+                    ),
+                    url('/imgs/Mage\ Meme.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Adicione outras propriedades CSS se necessário */
+}
  
 #scroll-div{
     position:absolute;
