@@ -75,3 +75,74 @@ var scrollpos = window.scrollY;
         }
         return false;
       }
+
+
+// O código abaixo deve ser movido para o seu arquivo script.js
+        // para manter a separação de responsabilidades.
+        // Apenas para demonstração, está aqui.
+
+        $(document).ready(function() {
+            const $carouselWrapper = $('#carousel-wrapper');
+            const $carouselItems = $carouselWrapper.children('.carousel-item');
+            const $prevBtn = $('#carousel-prev');
+            const $nextBtn = $('#carousel-next');
+
+            let currentIndex = 0;
+            let itemsPerView = 1; // Default para mobile
+            let itemWidth = 0; // Será calculado dinamicamente
+
+            function updateItemsPerView() {
+                if (window.innerWidth >= 1024) {
+                    itemsPerView = 4;
+                } else if (window.innerWidth >= 768) {
+                    itemsPerView = 3;
+                } else {
+                    itemsPerView = 1;
+                }
+                // Recalcula a largura do item baseado no número de itens visíveis
+                // Se $carouselItems.first() não existir, itemWidth será 0, evitando erro
+                itemWidth = $carouselItems.first().outerWidth(true); // Inclui margem/padding
+                if (itemWidth === 0) { // Fallback caso o elemento ainda não tenha sido renderizado com largura
+                     itemWidth = $carouselItems.first().width() + parseInt($carouselItems.first().css('padding-left')) * 2;
+                }
+                updateCarouselPosition();
+            }
+
+            function updateCarouselPosition() {
+                if ($carouselItems.length === 0) return; // Evita erro se não houver itens
+
+                const totalItems = $carouselItems.length;
+                let maxIndex = totalItems - itemsPerView;
+
+                if (maxIndex < 0) maxIndex = 0; // Garante que não vá para índice negativo se poucos itens
+
+                if (currentIndex > maxIndex) {
+                    currentIndex = maxIndex;
+                }
+                if (currentIndex < 0) {
+                    currentIndex = 0;
+                }
+                
+                const offset = -currentIndex * itemWidth;
+                $carouselWrapper.css('transform', `translateX(${offset}px)`);
+
+                // Habilitar/Desabilitar botões
+                $prevBtn.prop('disabled', currentIndex === 0).toggleClass('opacity-50 cursor-not-allowed', currentIndex === 0);
+                $nextBtn.prop('disabled', currentIndex >= maxIndex).toggleClass('opacity-50 cursor-not-allowed', currentIndex >= maxIndex);
+            }
+
+            $prevBtn.on('click', function() {
+                currentIndex--;
+                updateCarouselPosition();
+            });
+
+            $nextBtn.on('click', function() {
+                currentIndex++;
+                updateCarouselPosition();
+            });
+
+            // Atualiza ao carregar e redimensionar
+            $(window).on('resize', function() {
+                updateItemsPerView();
+            }).trigger('resize'); // Dispara uma vez para inicializar
+        });

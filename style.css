@@ -277,3 +277,49 @@ nav #header {
         height: 900px;
     }
 } */
+
+
+/* Estilos adicionais para o carousel, se necessário */
+    .carousel-container {
+        overflow: hidden; /* Esconde os itens que não estão visíveis */
+    }
+    .carousel-wrapper {
+        display: flex;
+        transition: transform 0.5s ease-in-out; /* Suaviza a transição do slide */
+    }
+    .carousel-item {
+        flex: 0 0 100%; /* Cada item ocupa 100% da largura do container do wrapper inicialmente */
+        min-width: 100%; /* Garante que o item não encolha */
+    }
+    /* Para telas maiores, mostre 3 itens por vez */
+    @media (min-width: 768px) {
+        .carousel-item {
+            flex: 0 0 33.333%; /* Cada item ocupa 1/3 da largura */
+            min-width: 33.333%;
+        }
+    }
+    /* Para telas ainda maiores, mostre 4 itens por vez */
+    @media (min-width: 1024px) {
+        .carousel-item {
+            flex: 0 0 25%; /* Cada item ocupa 1/4 da largura */
+            min-width: 25%;
+        }
+    }
+
+
+/* Estilos adicionais para o container do vídeo */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Proporção 16:9 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
