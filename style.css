@@ -14,6 +14,7 @@ html,body{
     height: 100%;
     width: 100%;
     background-color: black;
+    zoom: 96%;
 }
 
 nav #header {
@@ -323,3 +324,82 @@ nav #header {
             width: 100%;
             height: 100%;
         }
+
+        
+/* Estilos adicionais para tela de carregamento */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000; /* Cor de fundo da tela de carregamento */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Garante que fique acima de todo o conteúdo */
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out; /* Adiciona transição de opacidade e visibilidade */
+}
+
+.loader {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite; /* Animação de giro */
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Oculta o loader quando a classe 'hidden' é adicionada */
+#loader-wrapper.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Estilo para o conteúdo principal (pode ser ajustado) */
+#content {
+    padding: 20px;
+}
+
+
+/* Estilos adicionais para tela RoadMap */
+
+/* Estilo para a linha vertical no centro */
+.roadmap-container {
+    position: relative;
+    /* Isso cria um contexto de posicionamento para a linha */
+}
+
+.roadmap-container::after {
+    content: '';
+    position: absolute;
+    left: 50%; /* Centraliza a linha */
+    top: 0;
+    bottom: 0;
+    width: 4px; /* Largura da linha */
+    background-color: #3B82F6; /* Cor da linha (azul Tailwind) */
+    transform: translateX(-50%); /* Ajuste para centralizar perfeitamente */
+    z-index: 0; /* Coloca a linha atrás dos cards */
+}
+
+/* Ajuste para os cards, para garantir que o conteúdo não seja sobreposto pela linha */
+/* Você pode adicionar um background branco aos cards, por exemplo, ou padding horizontal extra */
+.roadmap-card {
+    min-height: 250px;
+    position: relative; /* Para garantir que o card fique acima da linha */
+    z-index: 10; /* Garante que os cards fiquem acima da linha */
+    background-color: white; /* Garante que a linha não apareça através do card */
+}

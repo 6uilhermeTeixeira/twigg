@@ -146,3 +146,66 @@ var scrollpos = window.scrollY;
                 updateItemsPerView();
             }).trigger('resize'); // Dispara uma vez para inicializar
         });
+
+// Código para o loader // Código para o loader // Código para o loader
+
+document.addEventListener('DOMContentLoaded', function() {
+    const loaderWrapper = document.getElementById('loader-wrapper');
+    const content = document.getElementById('content');
+    const body = document.body; // Referência direta ao elemento body
+
+    // Define o atraso MÍNIMO em milissegundos (1 segundos = 1000 ms)
+    const minDelayTime = 500;
+
+    // Variável para controlar se o window.load já foi disparado
+    let windowLoaded = false;
+
+    // Armazena o tempo em que o DOMContentLoaded ocorreu
+    const domContentLoadedTime = Date.now();
+
+    // Adiciona overflow: hidden ao body assim que o DOM estiver pronto
+    // para evitar rolagem enquanto o loader está visível.
+    body.style.overflow = 'hidden';
+
+    // Função para esconder o loader e mostrar o conteúdo
+    function hideLoader() {
+        loaderWrapper.classList.add('hidden'); // Adiciona a classe para iniciar a transição de fade-out
+
+        // Adiciona um listener para quando a transição CSS terminar
+        loaderWrapper.addEventListener('transitionend', function() {
+            loaderWrapper.style.display = 'none'; // Finalmente, remove o loader da exibição
+            body.style.overflow = ''; // Remove o overflow: hidden do body para permitir rolagem
+        }, { once: true }); // O { once: true } garante que o evento seja escutado apenas uma vez
+
+        content.style.display = 'block'; // Mostra o conteúdo principal
+    }
+
+    // O loader só sumirá após todos os recursos da página estarem carregados E o tempo mínimo de delay ter passado
+    window.addEventListener('load', function() {
+        windowLoaded = true;
+        const timeElapsed = Date.now() - domContentLoadedTime;
+
+        if (timeElapsed >= minDelayTime) {
+            // Se o tempo mínimo já passou, esconde o loader imediatamente
+            hideLoader();
+        } else {
+            // Se o tempo mínimo ainda não passou, espera o restante do tempo
+            setTimeout(hideLoader, minDelayTime - timeElapsed);
+        }
+    });
+
+    // Uma salvaguarda opcional para garantir que o overflow seja removido
+    // caso algo inesperado aconteça com o carregamento ou transição.
+    // Isso é menos crítico agora com o transitionend, mas pode ser útil em cenários complexos.
+    setTimeout(() => {
+        if (windowLoaded && body.style.overflow === 'hidden') {
+            // Se a página já carregou e o overflow ainda está hidden (por algum motivo),
+            // remove-o. Isso é um fallback.
+            // No fluxo normal, o 'transitionend' já teria feito isso.
+            // body.style.overflow = ''; // Deixe comentado para confiar no transitionend, ou descomente se precisar de um fallback robusto
+        }
+    }, minDelayTime + 1000); // Dá um tempo extra para a transição e a função hideLoader serem concluídas
+
+});
+
+// Código para o loader // Código para o loader // Código para o loader
